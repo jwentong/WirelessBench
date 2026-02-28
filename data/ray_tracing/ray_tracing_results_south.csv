@@ -1,0 +1,31 @@
+RX_ID,X,Y,Z,SNR_dB,RX_Power_dBm,CQI,LOS,User_Request,Request_Label
+1,53.71,-22.01,1.50,34.05,-58.94,15,0,I want to update my social media status,eMBB
+2,-36.84,-2.71,1.50,44.49,-48.50,15,0,I need to control precision CNC machines with zero tolerance for delay,URLLC
+3,116.38,-20.01,1.50,19.06,-73.93,11,0,I need reliable communication for firefighters inside buildings,URLLC
+4,134.01,124.30,1.50,9.82,-83.17,8,0,I need to monitor IoT sensors in real-time,URLLC
+5,180.15,90.38,1.50,7.65,-85.34,7,0,I need to detect and isolate power grid faults instantly,URLLC
+6,112.32,127.24,1.50,11.44,-81.55,9,0,I want to play competitive mobile games with ultra-low latency,URLLC
+7,-9.66,64.72,1.50,32.35,-60.64,15,0,I want to monitor my home security cameras remotely,eMBB
+8,30.41,73.57,1.50,27.92,-65.07,14,0,I want to download a large software update,eMBB
+9,88.15,-37.29,1.50,23.51,-69.48,13,0,I need to synchronize distributed financial ledgers instantly,URLLC
+10,-36.45,-59.82,1.50,30.38,-62.61,15,0,I want to use augmented reality navigation,eMBB
+11,138.48,22.13,1.50,15.43,-77.56,10,0,I need to sync my calendar and contacts,eMBB
+12,-66.49,79.64,1.50,22.36,-70.63,12,0,I need real-time traffic updates for navigation,eMBB
+13,140.26,69.14,1.50,13.14,-79.85,9,0,I want to use augmented reality navigation,eMBB
+14,-56.54,-41.80,1.50,30.47,-62.52,15,0,I want to use remote surgery equipment,URLLC
+15,184.41,58.90,1.50,8.50,-84.49,7,0,I need to sync my calendar and contacts,eMBB
+16,-47.84,67.64,1.50,27.27,-65.72,14,0,I need to monitor IoT sensors in real-time,URLLC
+17,112.21,-23.28,1.50,19.70,-73.29,11,0,I need to deploy early warning systems for natural disasters,URLLC
+18,-75.47,153.94,1.50,11.37,-81.62,8,0,I need to participate in an online multiplayer game,URLLC
+19,161.77,2.68,1.50,12.33,-80.66,9,0,I need emergency response coordination during a disaste,URLLC
+20,112.49,37.41,1.50,19.08,-73.91,11,0,I need microsecond-level latency for high-frequency tradin,URLLC
+21,8.53,-100.54,1.50,22.43,-70.56,12,0,I need to check weather forecasts,eMBB
+22,3.80,166.95,1.50,11.90,-81.09,9,0,I need to balance electrical load in real-time across microgrids,URLLC
+23,183.53,155.37,1.50,3.86,-89.13,6,0,I need AI-based video analytics,eMBB
+24,186.05,48.18,1.50,8.65,-84.34,8,0,I need to monitor and control critical manufacturing processes in real-time,URLLC
+25,158.06,8.03,1.50,12.81,-80.18,9,0,I need to control remote diagnostic equipment in rural clinics,URLLC
+26,82.17,-38.42,1.50,24.65,-68.34,13,0,I need to participate in an online multiplayer game,URLLC
+27,-47.78,-79.97,1.50,24.29,-68.70,13,0,I need to control critical infrastructure with zero downtime,URLLC
+28,126.45,57.73,1.50,15.67,-77.32,10,0,I need to transmit real-time patient vital signs during critical care,URLLC
+29,97.48,-67.97,1.50,18.88,-74.11,11,0,I want to read news articles online,eMBB
+30,189.82,143.20,1.50,4.10,-88.89,6,0,I need to make a high-quality voice call,eMBB

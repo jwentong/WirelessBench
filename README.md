@@ -105,9 +105,15 @@ WirelessBench/
 │   ├── maps/                # OpenStreetMap data (HKUST campus)
 │   ├── ray_tracing/         # Pre-computed ray tracing results
 │   └── knowledge_base/      # Intent classification knowledge
+├── preprocessing/           # Dataset construction & analysis
+│   ├── expand_dataset.py    # LLM-powered dataset expansion
+│   ├── format_and_split.py  # Normalise fields, test/val split
+│   ├── txt_to_jsonl.py      # Raw text → JSONL converter
+│   ├── visualize.py         # Publication-quality dataset charts
+│   └── llm_batcher.py       # Concurrent LLM API caller
 ├── scripts/                 # Supporting tools & utilities
 │   ├── evaluator.py         # Evaluator orchestrator
-│   ├── tools.py             # Tool infrastructure
+│   ├── tools.py             # Tool infrastructure (BaseTool, ToolRegistry)
 │   ├── wireless_tools.py    # Wireless domain tools
 │   ├── enhanced_tools.py    # RAG & calculator tools
 │   ├── logs.py              # Logging
@@ -266,6 +272,48 @@ models:
     base_url: "https://api.openai.com/v1"
     api_key: "your-api-key"
     temperature: 0
+```
+
+## Data Preprocessing
+
+The `preprocessing/` module contains the full pipeline for building and analysing the WCHW dataset from scratch.
+
+### Expand an existing dataset with LLM-generated questions
+
+```bash
+python -m preprocessing.expand_dataset \
+    --input data/datasets/wchw_validate.jsonl \
+    --output wchw_expanded.jsonl \
+    --target 500 \
+    --model gpt-4o
+```
+
+### Format & split a raw JSONL into test / validate
+
+```bash
+python -m preprocessing.format_and_split \
+    --input wchw_expanded.jsonl \
+    --output-test data/datasets/wchw_test.jsonl \
+    --output-validate data/datasets/wchw_validate.jsonl \
+    --ratio 0.75
+```
+
+### Convert a raw text file to JSONL
+
+```bash
+python -m preprocessing.txt_to_jsonl \
+    --input raw_questions.txt \
+    --output-test data/datasets/wchw_test.jsonl \
+    --output-validate data/datasets/wchw_validate.jsonl
+```
+
+### Generate dataset visualisations
+
+```bash
+python -m preprocessing.visualize \
+    --test data/datasets/wchw_test.jsonl \
+    --val  data/datasets/wchw_validate.jsonl \
+    --outdir figures/
 ```
 
 ## License

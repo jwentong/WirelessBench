@@ -45,8 +45,12 @@ class PythonExecutor(BaseTool):
         )
         super().__init__(schema)
     
-    def execute(self, code: str) -> Dict[str, Any]:
-        """Execute Python code safely (sync method, can also be called with await)"""
+    async def execute(self, code: str = None, **kwargs) -> Dict[str, Any]:
+        """Execute Python code safely."""
+        if not code:
+            code = kwargs.get("expression") or kwargs.get("script")
+            if not code:
+                return {"success": False, "result": None, "error": "Missing 'code' parameter."}
         try:
             # Safe execution environment
             safe_globals = {

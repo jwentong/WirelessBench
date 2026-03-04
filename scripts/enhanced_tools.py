@@ -21,14 +21,8 @@ import sys
 from typing import Dict, Any, Optional, List
 import math
 
-# Import from scripts.tools (the .py file, not the directory)
-# This contains BaseTool, ToolSchema, ToolParameter
-import scripts.tools as tools_module
+from scripts.tools import BaseTool, ToolSchema, ToolParameter
 from scripts.logs import logger
-
-BaseTool = tools_module.BaseTool
-ToolSchema = tools_module.ToolSchema
-ToolParameter = tools_module.ToolParameter
 
 # Add telecom_tools directory to path
 current_dir = os.path.dirname(os.path.abspath(__file__))
